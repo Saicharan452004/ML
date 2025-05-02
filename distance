@@ -1,0 +1,18 @@
+ import numpy as np
+ from scipy.spatial.distance import euclidean, cityblock, cosine
+ def compute_euclidean_distance(point1, point2):
+  return euclidean(point1, point2)
+ def compute_manhattan_distance(point1, point2):
+  return cityblock(point1, point2)
+ def compute_cosine_distance(point1, point2):
+  return cosine(point1, point2)
+ dataset1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+ dataset2 = np.array([[2, 3, 4], [5, 6, 7], [8, 9, 10]])
+ point1 = dataset1[0]
+ point2 = dataset2[1]
+ euclidean_dist = compute_euclidean_distance(point1, point2)
+ manhattan_dist = compute_manhattan_distance(point1, point2)
+ cosine_dist = compute_cosine_distance(point1, point2)
+ print("Euclidean Distance:", euclidean_dist)
+ print("Manhattan Distance:", manhattan_dist)
+ print("Cosine Distance:", cosine_dist)
